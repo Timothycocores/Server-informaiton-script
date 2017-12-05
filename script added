@@ -1,0 +1,2 @@
+###CSI Auditing Script
+clear ; echo "======================================================" ; lscpu | grep "CPU(s):      " | awk -F "" '{print "CPU(s): " $24$25}' ; vmstat -s -S m | grep "total memory" | awk -F "" '{print "Total Memory: " $8$9$10 " GB"}' ; pvscan | grep Total | cut -c3- | cut -f1 -d/ | cut -c10- | awk -F "" '{print "Total Storage: " $0}' ; hostname -i | awk -F "" '{print "IP Address: " $0}' ; cat /etc/redhat-release ; echo "======================================================"
